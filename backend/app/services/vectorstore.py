@@ -19,3 +19,10 @@ class VectorStore:
             for i, s in zip(ids[0], scores[0])
             if i != -1                         # no results for this query
         ]
+
+    def score_all(self, query_vector: np.ndarray) -> np.ndarray:
+        """Similarity score of EVERY chunk to the query, indexed by chunk position."""
+        scores, ids = self.index.search(query_vector, len(self.chunks))
+        by_position = np.zeros(len(self.chunks), dtype="float32")
+        by_position[ids[0]] = scores[0]
+        return by_position

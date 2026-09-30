@@ -17,9 +17,9 @@ class Settings(BaseSettings):
 
     # RAG settings (easy to tweak)
     MIN_TEXT_LENGTH: int = 200
-    CHUNK_SIZE: int = 1000
+    CHUNK_SIZE: int = 1500
     CHUNK_OVERLAP: int = 200
-    TOP_K: int = 4
+    TOP_K: int = 8
     EMBEDDING_MODEL: str = "BAAI/bge-small-en-v1.5"
 
     @property
