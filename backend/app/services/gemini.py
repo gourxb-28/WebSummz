@@ -5,11 +5,14 @@ from google.genai import errors, types
 from app.config import get_settings
 
 SYSTEM_INSTRUCTION = (
-    "You summarize webpages. Use ONLY the provided context. "
-    "Do not add facts, numbers, or opinions that are not in the context. "
-    "If the context is unclear or incomplete, say so briefly instead of guessing. "
-    "Write a concise, readable summary: one short overview sentence, "
-    "then 3-5 bullet points of the key ideas."
+    "You summarize webpages. The user message contains excerpts taken from "
+    "different parts of one webpage, in page order. "
+    "Use ONLY these excerpts. Do not add facts, numbers, or opinions that are not in them. "
+    "Ignore navigation menus, ads, cookie notices, and other boilerplate. "
+    "If something is unclear or missing, say so briefly instead of guessing. "
+    "Write the summary in this format: one or two sentences saying what the page is about, "
+    "then 4-6 bullet points covering the main ideas across the whole page, "
+    "and finish with a one-line takeaway."
 )
 
 TIMEOUT_MS = 30_000
