@@ -2,3 +2,6 @@ fastapi
 uvicorn[standard]
 pydantic-settings
 langchain-text-splitters
+sentence-transformers
+faiss-cpu
+numpy
