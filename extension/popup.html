@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Webpage Summarizer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>Webpage Summarizer</h1>
+  <p class="subtitle">Summarize the current page with RAG + Gemini</p>
+
+  <button id="summarize-btn">Summarize</button>
+
+  <div id="loading" class="hidden" role="status">
+    <span class="spinner"></span>
+    <span id="loading-text">Working...</span>
+  </div>
+
+  <div id="error" class="hidden" role="alert"></div>
+
+  <div id="note" class="hidden"></div>
+
+  <div id="summary" class="hidden" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

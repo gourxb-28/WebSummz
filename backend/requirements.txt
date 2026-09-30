@@ -5,3 +5,5 @@ langchain-text-splitters
 sentence-transformers
 faiss-cpu
 numpy
+google-genai
+httpx
